@@ -64,17 +64,11 @@ $(document).ready(function() {
     	640: {
     		items: 3,
     	},
-    	820: {
-    		items: 4,
-    	},
     	992: {
-    		items: 5,
+    		items: 4,
     	},
     	1200: {
     		items: 6,
-    	},
-    	1400: {
-    		items: 7,
     	},
     },
     dots: false,
@@ -97,10 +91,7 @@ $(document).ready(function() {
     	450: {
     		items: 2,
     	},
-    	640: {
-    		items: 3,
-    	},
-    	820: {
+    	768: {
     		items: 4,
     	},
     },
@@ -127,7 +118,7 @@ $(document).ready(function() {
     	640: {
     		items: 3,
     	},
-    	820: {
+    	768: {
     		items: 4,
     	},
     	992: {
@@ -146,4 +137,39 @@ $(document).ready(function() {
     margin: 2,
   });
 
+  $('.owl-4-1').owlCarousel({
+  	responsive: {
+    	0: {
+    		items: 1,
+    	},
+    	450: {
+    		items: 2,
+    	},
+    	768: {
+    		items: 3,
+    	},
+    },
+    dots: false,
+    nav: true,
+    navText: ['',''],
+    smartSpeed: 1000,
+    stageElement: 'ul',
+    itemElement: 'li',
+    stageClass: 'nav',
+    mouseDrag: false,
+		touchDrag: false,
+    margin: 2,
+  });
+
+  $('.tab-content > *').addClass('tab-pane');
+
+  $('[data-toggle="popover"]').popover({
+	  trigger: 'hover',
+	  placement: 'bottom',
+	});
+
 });
+
+
+
+
