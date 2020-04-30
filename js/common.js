@@ -16,12 +16,11 @@ $(document).ready(function() {
 		    		items: 3,
 		    	},
 		    },
+    		dots: false,
 		    smartSpeed: 1000,
 		    stageElement: 'ul',
 		    itemElement: 'li',
 		    stageClass: 'nav',
-		    mouseDrag: false,
-				touchDrag: false,
 		    margin: 22,
 			});
 	  } else {
@@ -36,9 +35,13 @@ $(document).ready(function() {
   	responsive: {
     	0: {
     		items: 1,
+		    mouseDrag: true,
+				touchDrag: true,
     	},
     	450: {
     		items: 2,
+		    mouseDrag: false,
+				touchDrag: false,
     	},
     },
     dots: false,
@@ -48,8 +51,6 @@ $(document).ready(function() {
     stageElement: 'ul',
     itemElement: 'li',
     stageClass: 'nav',
-    mouseDrag: false,
-		touchDrag: false,
     margin: 2,
   });
 
@@ -78,8 +79,6 @@ $(document).ready(function() {
     stageElement: 'ul',
     itemElement: 'li',
     stageClass: 'nav',
-    mouseDrag: false,
-		touchDrag: false,
     margin: 2,
   });
 
@@ -93,6 +92,8 @@ $(document).ready(function() {
     	},
     	768: {
     		items: 4,
+		    mouseDrag: false,
+				touchDrag: false,
     	},
     },
     dots: false,
@@ -102,8 +103,6 @@ $(document).ready(function() {
     stageElement: 'ul',
     itemElement: 'li',
     stageClass: 'nav',
-    mouseDrag: false,
-		touchDrag: false,
     margin: 2,
   });
 
@@ -123,6 +122,8 @@ $(document).ready(function() {
     	},
     	992: {
     		items: 6,
+		    mouseDrag: false,
+				touchDrag: false,
     	},
     },
     dots: false,
@@ -132,8 +133,6 @@ $(document).ready(function() {
     stageElement: 'ul',
     itemElement: 'li',
     stageClass: 'nav',
-    mouseDrag: false,
-		touchDrag: false,
     margin: 2,
   });
 
@@ -147,6 +146,8 @@ $(document).ready(function() {
     	},
     	768: {
     		items: 3,
+		    mouseDrag: false,
+				touchDrag: false,
     	},
     },
     dots: false,
@@ -156,16 +157,30 @@ $(document).ready(function() {
     stageElement: 'ul',
     itemElement: 'li',
     stageClass: 'nav',
-    mouseDrag: false,
-		touchDrag: false,
     margin: 2,
   });
 
   $('.tab-content > *').addClass('tab-pane');
 
   $('[data-toggle="popover"]').popover({
-	  trigger: 'hover',
+	  trigger: 'focus',
 	  placement: 'bottom',
+	});
+	$('[data-toggle="popover"]').on('click', function(e) {
+	  e.stopPropagation();
+	});
+
+	$('#nav-1 .block').on('click', function() {
+		$('[href="#nav-2"]').trigger('click');
+		$owlMain.trigger('to.owl.carousel', 1);
+	});
+	$('#nav-2 .block').on('click', function() {
+		$('[href="#nav-3"]').trigger('click');
+		$owlMain.trigger('to.owl.carousel', 2);
+	});
+	$('#nav-3 .block').on('click', function() {
+		$('[href="#nav-4"]').trigger('click');
+		$owlMain.trigger('to.owl.carousel', 3);
 	});
 
 });
