@@ -163,7 +163,7 @@ $(document).ready(function() {
   $('.tab-content > *').addClass('tab-pane');
 
   $('[data-toggle="popover"]').popover({
-	  trigger: 'focus',
+	  trigger: 'hover',
 	  placement: 'bottom',
 	});
 	$('[data-toggle="popover"]').on('click', function(e) {
