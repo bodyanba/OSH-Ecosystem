@@ -203,7 +203,7 @@ $(document).ready(function() {
   $('.tab-content > *').addClass('tab-pane');
 
   $('[data-toggle="popover"]').popover({
-	  // trigger: 'hover',
+	  trigger: 'hover',
 	  placement: 'bottom',
 	});
 	$('[data-toggle="popover"]').on('click', function(e) {
