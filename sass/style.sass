@@ -55,11 +55,15 @@ img
 				content: ''
 				position: absolute
 				top: 50%
-				right: 0
-				transform: translateY(-50%)
 				border: 35px solid transparent
 				border-right: 30px solid #04385C
 				border-left: 0
+				right: 0
+				transform: translateY(-50%)
+				[dir='rtl'] &
+					right: auto
+					left: 0
+					transform: translateY(-50%) rotate(180deg)
 				.owl-sm &
 					border-width: 15px
 					border-right-width: 13px
