@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+	var dir = false;
+	if ( $("html").attr("dir") == "rtl" ) {
+		dir = true;
+	};
+
 	$owlMain = $('.owl-main');
 	function initializeMain() {
 	  if (window.matchMedia('(max-width: 767.98px)').matches) {
@@ -16,6 +21,7 @@ $(document).ready(function() {
 		    		items: 3,
 		    	},
 		    },
+		    rtl: dir,
     		dots: false,
 		    smartSpeed: 1000,
 		    stageElement: 'ul',
@@ -44,6 +50,7 @@ $(document).ready(function() {
 				touchDrag: false,
     	},
     },
+    rtl: dir,
     dots: false,
     nav: true,
     navText: ['',''],
@@ -72,6 +79,7 @@ $(document).ready(function() {
     		items: 6,
     	},
     },
+    rtl: dir,
     dots: false,
     nav: true,
     navText: ['',''],
@@ -96,6 +104,7 @@ $(document).ready(function() {
 				touchDrag: false,
     	},
     },
+    rtl: dir,
     dots: false,
     nav: true,
     navText: ['',''],
@@ -126,6 +135,7 @@ $(document).ready(function() {
 				touchDrag: false,
     	},
     },
+    rtl: dir,
     dots: false,
     nav: true,
     navText: ['',''],
@@ -150,6 +160,7 @@ $(document).ready(function() {
 				touchDrag: false,
     	},
     },
+    rtl: dir,
     dots: false,
     nav: true,
     navText: ['',''],
@@ -160,10 +171,39 @@ $(document).ready(function() {
     margin: 2,
   });
 
+  $('.owl-img').owlCarousel({
+  	responsive: {
+    	0: {
+    		items: 1,
+    	},
+    	450: {
+    		items: 2,
+    	},
+    	576: {
+    		items: 3,
+    	},
+    	768: {
+    		items: 4,
+    	},
+    	992: {
+    		items: 6,
+    	},
+    	1200: {
+    		items: 8,
+    	},
+    },
+    rtl: dir,
+    dots: false,
+    nav: true,
+    navText: ['',''],
+    smartSpeed: 1000,
+    margin: 2,
+  });
+
   $('.tab-content > *').addClass('tab-pane');
 
   $('[data-toggle="popover"]').popover({
-	  trigger: 'hover',
+	  // trigger: 'hover',
 	  placement: 'bottom',
 	});
 	$('[data-toggle="popover"]').on('click', function(e) {
