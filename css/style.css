@@ -32,8 +32,10 @@ img {
   font-size: 20px; }
 
 .owl-theme .owl-item img {
-  display: inline;
+  margin: 0 auto;
   width: auto; }
+.owl-theme .owl-item .owl-lazy:not([src]), .owl-theme .owl-item .owl-lazy[src^=""] {
+  max-height: initial; }
 .owl-theme .owl-nav {
   margin-top: 0; }
   .owl-theme .owl-nav [class*=owl-] {

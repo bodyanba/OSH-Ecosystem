@@ -35,8 +35,11 @@ img
 .owl-theme
 	.owl-item
 		img 
-			display: inline
+			margin: 0 auto
 			width: auto
+		.owl-lazy
+			&:not([src]), &[src^=""]
+				max-height: initial
 	.owl-nav 
 		margin-top: 0
 		[class*=owl-]
