@@ -59,6 +59,7 @@ $(document).ready(function() {
     itemElement: 'li',
     stageClass: 'nav',
     margin: 2,
+    lazyLoad: true,
   });
 
   $('.owl-2').owlCarousel({
@@ -88,6 +89,7 @@ $(document).ready(function() {
     itemElement: 'li',
     stageClass: 'nav',
     margin: 2,
+    lazyLoad: true,
   });
 
 	$('.owl-3').owlCarousel({
@@ -113,6 +115,7 @@ $(document).ready(function() {
     itemElement: 'li',
     stageClass: 'nav',
     margin: 2,
+    lazyLoad: true,
   });
 
   $('.owl-4').owlCarousel({
@@ -144,6 +147,7 @@ $(document).ready(function() {
     itemElement: 'li',
     stageClass: 'nav',
     margin: 2,
+    lazyLoad: true,
   });
 
   $('.owl-4-1').owlCarousel({
@@ -198,6 +202,7 @@ $(document).ready(function() {
     navText: ['',''],
     smartSpeed: 1000,
     margin: 2,
+    lazyLoad: true,
   });
 
   $('.tab-content > *').addClass('tab-pane');
