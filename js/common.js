@@ -173,6 +173,7 @@ $(document).ready(function() {
     itemElement: 'li',
     stageClass: 'nav',
     margin: 2,
+    lazyLoad: true,
   });
 
   $('.owl-img').owlCarousel({
